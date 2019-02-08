@@ -1,0 +1,113 @@
+@import 'bootstrap.css';
+@import url('https://fonts.googleapis.com/css?family=Dosis');
+
+body{
+    min-height: 100%;  
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #69BDFF;
+    color: #ffffff;
+    font-family: "Dosis", sans-serif; 
+}
+
+.container{
+    /* outline: thin solid grey; */
+}
+.container#buttonContainer{
+    text-align: right;
+}
+
+p{
+    text-align: center;
+    font-size: 3.5vh;
+}
+input{
+    display: block;
+    margin: 0 auto;
+    border-width: thin;
+    width: 100%;
+    min-height: 6vh;
+    text-align: center;
+    border: none;
+    border-radius: 0.4rem;
+    font-size: 2vh;
+}
+input:before{
+    color:#9d9d9d;
+    position: absolute;
+}
+input.timeIn:before{
+    content:'Hora da entrada';
+}
+input.timeOut:before{
+    content:'Hora da saída';
+}
+input:focus{
+    -webkit-box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.4);;
+    -moz-box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.4);;
+    box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.4);;
+    outline: none;
+}
+input[type=time]::-webkit-inner-spin-button, 
+input[type=time]::-webkit-outer-spin-button { 
+  height: auto; 
+}
+input[type="time"]::-webkit-clear-button {
+    display: none;
+}
+input[type="time"]::-ms-clear {
+    display: none;
+}
+button.btn{
+    margin-top: 20px;
+    font-size: 3vh;
+    background: white;
+    box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.4);
+    transition: all ease-in-out 300ms;
+}
+button.btn:hover{
+    box-shadow: 0px 37px 20px -20px rgba(0,0,0,0.2);
+    transform: translate(0px, -5px) scale(1.05);
+}
+button#addButton, button#removeButton{
+   background-color: #007bff;
+   margin: 0;
+   width: 5vh;
+   height: 5vh;
+   line-height: 2vh;
+}
+button.disable{
+    background-color: grey !important;
+    transition: none;
+    border-color: grey;
+}
+button.disable:hover{
+    transform: none;
+    box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.4);
+    border-color: grey;
+    cursor: auto !important;
+}
+button.disable:active{
+    border-color: grey !important;
+    box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.4) !important;
+}
+button.disable:focus{
+    box-shadow: 0px 17px 10px -10px rgba(0,0,0,0.4)
+}
+.error{
+    text-align: center;
+    font-size: 2.5vh;
+    background: #ff3019;
+    background: -moz-linear-gradient(top, #ff3019 0%, #cf0404 49%);
+    background: -webkit-linear-gradient(top, #ff3019 0%,#cf0404 49%);
+    background: linear-gradient(to bottom, #ff3019 0%,#cf0404 49%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=0 );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    visibility: hidden
+}
+.error.animated{
+    visibility: visible;
+}
